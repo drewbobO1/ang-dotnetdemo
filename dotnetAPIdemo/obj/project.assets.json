@@ -5141,11 +5141,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/drewg/RiderProjects/dotnetAPIdemo/dotnetAPIdemo.csproj",
+      "projectUniqueName": "/Users/drewg/RiderProjects/ang+dotnetdemo/dotnetAPIdemo/dotnetAPIdemo.csproj",
       "projectName": "dotnetAPIdemo",
-      "projectPath": "/Users/drewg/RiderProjects/dotnetAPIdemo/dotnetAPIdemo.csproj",
+      "projectPath": "/Users/drewg/RiderProjects/ang+dotnetdemo/dotnetAPIdemo/dotnetAPIdemo.csproj",
       "packagesPath": "/Users/drewg/.nuget/packages/",
-      "outputPath": "/Users/drewg/RiderProjects/dotnetAPIdemo/obj/",
+      "outputPath": "/Users/drewg/RiderProjects/ang+dotnetdemo/dotnetAPIdemo/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/drewg/.nuget/NuGet/NuGet.Config"
