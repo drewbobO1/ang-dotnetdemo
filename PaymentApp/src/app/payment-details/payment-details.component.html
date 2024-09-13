@@ -9,5 +9,10 @@
     </div>
     <div class="col-6">
         List payment details womp
+        <ul class="list-group">
+            <li *ngFor="let pd of service.list">
+                {{pd.cardOwnerName}}
+            </li>
+        </ul>
     </div>
 </div>
