@@ -1,1 +1,37 @@
-<p>payment-detail-form works!</p>
+<!-- For some reason, the ngModel isn't recognized here 
+ despite my importing it in the corresponding component -->
+<form>
+    <input type="hidden" name="paymentDetailId" []>
+    <div class="mb-3">
+        <label for="">Card Owner Name</label>
+        <input class="form-control form-control-lg" 
+        placeholder="Name on card"
+        #cardOwnerName="ngModel" name="cardOwnerName"
+        [(ngModel)]="service.formData.cardOwnerName"
+        >
+    </div>
+    <div class="mb-3">
+        <label for="">Card number</label>
+        <input class="form-control form-control-lg" 
+        placeholder="1234 1234 1234 1234"
+        #cardNumber="ngModel" name="cardNumber"
+        [(ngModel)]="service.formData.cardNumber"
+        >
+    </div>
+    <div class="mb-3">
+        <label for="">Expiration date</label>
+        <input class="form-control form-control-lg" 
+        placeholder="mm/yy"
+        #expirationDate="ngModel" name="expirationDate"
+        [(ngModel)]="service.formData.expirationDate"
+        >
+    </div>
+    <div class="mb-3">
+        <label for="">Security code</label>
+        <input class="form-control form-control-lg" 
+        placeholder="123" type="password"
+        #securityCode="ngModel" name="securityCode"
+        [(ngModel)]="service.formData.securityCode"
+        >
+    </div>
+</form>
