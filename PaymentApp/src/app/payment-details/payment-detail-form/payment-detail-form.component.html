@@ -1,7 +1,7 @@
 <!-- For some reason, the ngModel isn't recognized here 
  despite my importing it in the corresponding component -->
 <form>
-    <input type="hidden" name="paymentDetailId" []>
+    <input type="hidden" name="paymentDetailId" [value]="service.formData.paymentDetailId">
     <div class="mb-3">
         <label for="">Card Owner Name</label>
         <input class="form-control form-control-lg" 
@@ -33,5 +33,8 @@
         #securityCode="ngModel" name="securityCode"
         [(ngModel)]="service.formData.securityCode"
         >
+    </div>
+    <div class="d-grid">
+        <button class="btn btn-lg btn-success" type="submit">Submit</button>
     </div>
 </form>
