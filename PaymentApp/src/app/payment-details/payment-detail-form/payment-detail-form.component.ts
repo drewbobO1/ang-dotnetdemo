@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PaymentDetailService } from '../../shared/payment-detail.service';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
+import { PaymentDetail } from '../../shared/payment-detail.model';
 
 @Component({
   selector: 'app-payment-detail-form',
@@ -19,7 +20,8 @@ export class PaymentDetailFormComponent {
     this.service.postPaymentDetail()
     .subscribe({
       next:res=>{
-        console.log("POST res: ", res);
+        this.service.list = res as PaymentDetail[];
+        this.service.resetForm(form);
       },
       error: err => {console.error(err);}
     })
