@@ -22,4 +22,8 @@ export class PaymentDetailService {
       error: err => {console.error(err)}
     })
   }
+
+  postPaymentDetail() {
+    return this.http.post(this.url, this.formData)
+  }
 }
