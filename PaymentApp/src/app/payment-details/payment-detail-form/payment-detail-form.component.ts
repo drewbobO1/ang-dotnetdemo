@@ -21,15 +21,20 @@ export class PaymentDetailFormComponent {
   }
 
   onSubmit(form:NgForm) {
-    this.service.postPaymentDetail()
-    .subscribe({
-      next:res=>{
-        this.service.list = res as PaymentDetail[];
-        this.service.resetForm(form);
-        this.toastr.success("Card data submitted!", "Payment Detail Register");
-      },
-      error: err => {console.error(err);}
-    })
+    if (form.valid) {
+      this.service.postPaymentDetail()
+      .subscribe({
+        next:res=>{
+          this.service.list = res as PaymentDetail[];
+          this.service.resetForm(form);
+          this.toastr.success("Card data submitted!", "Payment Detail Register");
+        },
+        error: err => {console.error(err);}
+      })
+    }
+    else {
+      console.log("Please fill out all fields as required");
+    }
   }
 
 }

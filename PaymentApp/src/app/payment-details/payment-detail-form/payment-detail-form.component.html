@@ -8,6 +8,7 @@
         placeholder="Name on card"
         #cardOwnerName="ngModel" name="cardOwnerName"
         [(ngModel)]="service.formData.cardOwnerName"
+        required
         >
     </div>
     <div class="mb-3">
@@ -16,6 +17,9 @@
         placeholder="1234 1234 1234 1234"
         #cardNumber="ngModel" name="cardNumber"
         [(ngModel)]="service.formData.cardNumber"
+        required 
+
+        minlength="16" maxlength="16"
         >
     </div>
     <div class="row">
@@ -25,6 +29,9 @@
             placeholder="mm/yy"
             #expirationDate="ngModel" name="expirationDate"
             [(ngModel)]="service.formData.expirationDate"
+            required
+
+            minlength="5" maxlength="5"
             >
         </div>
         <div class="mb-3 col-6">
@@ -33,6 +40,9 @@
             placeholder="123" type="password"
             #securityCode="ngModel" name="securityCode"
             [(ngModel)]="service.formData.securityCode"
+            required
+
+            minlength="3" maxlength="3"
             >
         </div>
     </div>
