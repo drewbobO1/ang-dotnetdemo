@@ -21,6 +21,8 @@ export class PaymentDetailFormComponent {
   }
 
   onSubmit(form:NgForm) {
+    this.service.formSubmitted = true;
+    
     if (form.valid) {
       this.service.postPaymentDetail()
       .subscribe({
